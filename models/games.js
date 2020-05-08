@@ -40,7 +40,7 @@ module.exports = function (sequelize, DataTypes) {
       },
     },
 
-    //asso
+    //association to the rules
   });
 
   return Games;
