@@ -13,7 +13,7 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
       type: DataTypes.STRING,
       validate: {
-        len: [1, 100],
+        len: [1],
       },
     },
 
@@ -21,14 +21,14 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
       type: DataTypes.STRING,
       validate: {
-        len: [1, 100],
+        len: [1],
       },
     },
 
     country_origin: {
       type: DataTypes.STRING,
       validate: {
-        len: [1, 100],
+        len: [1],
       },
     },
 
@@ -36,9 +36,17 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
       type: DataTypes.STRING,
       validate: {
-        len: [1, 100],
+        len: [1],
       },
     },
+
+    instructions: {
+      allowNull: false,
+      type: DataTypes.TEXT,
+      validate: {
+        len: [1]
+      }
+    }
 
     //association to the rules
   });
