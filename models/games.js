@@ -8,52 +8,51 @@
 //make game first, attach id to all the rules for said game
 
 module.exports = function (sequelize, DataTypes) {
-  let Games = sequelize.define("Games", {
-    title: {
-      allowNull: false,
-      type: DataTypes.STRING,
-      validate: {
-        len: [1],
-      },
-    },
+    let Games = sequelize.define('Games', {
+        title: {
+            allowNull: false,
+            type: DataTypes.STRING,
+            validate: {
+                len: [1]
+            }
+        },
 
-    description: {
-      allowNull: false,
-      type: DataTypes.STRING,
-      validate: {
-        len: [1],
-      },
-    },
+        description: {
+            allowNull: false,
+            type: DataTypes.STRING,
+            validate: {
+                len: [1]
+            }
+        },
 
-    country_origin: {
-      type: DataTypes.STRING,
-      validate: {
-        len: [1],
-      },
-    },
+        country_origin: {
+            type: DataTypes.STRING,
+            validate: {
+                len: [1]
+            }
+        },
 
-    play_time: {
-      allowNull: false,
-      type: DataTypes.STRING,
-      validate: {
-        len: [1],
-      },
-    },
+        category: {
+            allowNull: false,
+            type: DataTypes.STRING,
+            validate: {
+                len: [1]
+            }
+        },
 
-    instructions: {
-      allowNull: false,
-      type: DataTypes.TEXT,
-      validate: {
-        len: [1]
-      }
-    }
+        instructions: {
+            allowNull: false,
+            type: DataTypes.TEXT,
+            validate: {
+                len: [1]
+            }
+        }
 
-    //association to the rules
-  });
+        //association to the rules
+    });
 
-  return Games;
+    return Games;
 };
-
 
 //instruction table
 //each instruction would be its one table with an id
@@ -62,6 +61,6 @@ module.exports = function (sequelize, DataTypes) {
 // varchar255
 // varchar255
 // varchar255
-//loop through and create 
+//loop through and create
 
-//two models, 
+//two models,

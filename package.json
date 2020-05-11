@@ -1,28 +1,28 @@
 {
-  "name": "rules",
-  "version": "1.0.0",
-  "description": "An app to hold rules to games.",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/meanGirls01/rules.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/meanGirls01/rules/issues"
-  },
-  "homepage": "https://github.com/meanGirls01/rules#readme",
-  "dependencies": {
-    "dotenv": "^8.2.0",
-    "eslint": "^7.0.0",
-    "express": "^4.17.1",
-    "mysql": "^2.18.1",
-    "mysql2": "^2.1.0",
-    "sequelize": "^5.21.7"
-  }
+    "name": "rules",
+    "version": "1.0.0",
+    "description": "An app to hold rules to games.",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/meanGirls01/rules.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/meanGirls01/rules/issues"
+    },
+    "homepage": "https://github.com/meanGirls01/rules#readme",
+    "dependencies": {
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "mysql": "^2.18.1",
+        "mysql2": "^2.1.0",
+        "sequelize": "^5.21.7"
+    }
+
 }
