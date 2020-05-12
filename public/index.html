@@ -1,16 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RuleMaster</title>
-</head>
-<body>
-    <!-- page hello -->
-<h1>THIS IS A WEBSITE</h1>
+    <head>
+        <meta charset="UTF-8" />
+        <title>STICKLER'S PARADISE</title>
 
-    <!-- jquery cdn -->
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-        crossorigin="anonymous"></script>
-</body>
+        <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
+        <link
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            rel="stylesheet"
+            integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+            crossorigin="anonymous"
+        />
+        <link href="assets/css/style.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <!-- START NAV -->
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="">
+                        <!-- <img src="" class="logo" alt="Stickler's Paradise" /> -->
+                        STICKLER'S PARADISE</a
+                    >
+                </div>
+                <div id="navbarMenu" class="navbar-menu">
+                    <div class="navbar-end">
+                        <a class="navbar-item is-active" href=""> Home </a>
+                        <a class="navbar-item" href=""> Add a Game</a>
+                        <a class="navbar-item" href=""> About/Team </a>
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link">Account</a>
+                            <div class="navbar-dropdown">
+                                <a class="navbar-item"> Dashboard</a>
+                                <a class="navbar-item"> Profile</a>
+                                <hr class="navbar-divider" />
+                                <a class="navbar-item">Sing In/ Sing Up</a>
+                                <a class="navbar-item">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END NAV -->
+        </nav>
+
+        <div class="container">
+            <div class="search">
+                <input class="input is-rounded" type="text" placeholder="Search you rules" />
+                <button class="button is-rounded">Search</button>
+            </div>
+            <div class="card"></div>
+        </div>
+        <!-- footer -->
+        <footer class="footer">
+            <a href="https://github.com/meanGirls01/rules"
+                ><i class="fa fa-github-alt fa-2x" aria-hidden="true"></i
+            ></a>
+            <p>STICKLER'S PARADISE</p>
+        </footer>
+
+        <!-- <script src=""></script> -->
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>
