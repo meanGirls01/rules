@@ -58,7 +58,11 @@ module.exports = function (sequelize, DataTypes) {
         //association to the rules
     });
 
+    //syncs with database
+    Games.sync();
+
     return Games;
+
 };
 
 //instruction table

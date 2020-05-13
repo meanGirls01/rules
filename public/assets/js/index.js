@@ -4,9 +4,10 @@ $(document).ready(function () {
 
     search.on('click', function (event) {
         event.preventDefault();
+        
         let searchTerm = input.val().trim();
 
-        $.get('/api/games').then(function (data) {
+        $.get('/api/' + searchTerm, function (data) {
             if (searchTerm = data) {
             $('.card').text(data);
             };
