@@ -4,7 +4,6 @@
 //country of origin
 //game time
 //rule ids foreign key?
-
 //make game first, attach id to all the rules for said game
 
 module.exports = function (sequelize, DataTypes) {
