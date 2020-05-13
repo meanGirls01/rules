@@ -1,11 +1,18 @@
 const db = require('../models');
 
 module.exports = function (app) {
+//find all games
+      app.get('/api/all', function (req, res) {
+          db.Games.findAll({}).then(function (results) {
+              res.json(results);
+          });
+      });
 
-    app.get('api/games', function (req, res) {
+    app.get('/api/:title', function (req, res) {
+        console.log(req.params);
         db.Games.findAll({
             where: {
-                title: req.body.title
+                title: req.params.title
             }
         }).then(function (dbGame) {
             res.json(dbGame);
@@ -14,7 +21,7 @@ module.exports = function (app) {
         });
     })
 
-    app.get('api/games/:id', function (req, res) {
+    app.get('/api/games/:id', function (req, res) {
         db.Games.findOne({
             where: {
                 id: req.params.id
@@ -29,7 +36,10 @@ module.exports = function (app) {
     });
 
     // POST route for saving a new game. You can create a game using the data on req.body
-    app.post('/api/games', function (req, res) {
+    app.post('/api/newgame', function (req, res) {
+        console.log(req.body);
+        console.log(req.params);
+
         db.Games.create({
             title: req.body.title, 
             description: req.body.description,
