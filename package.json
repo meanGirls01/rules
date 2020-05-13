@@ -4,7 +4,7 @@
     "description": "An app to hold rules to games.",
     "main": "server.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "npm run lint",
         "start": "node server.js"
     },
     "repository": {
