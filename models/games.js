@@ -7,61 +7,61 @@
 //make game first, attach id to all the rules for said game
 
 module.exports = function (sequelize, DataTypes) {
-    let Games = sequelize.define('Games', {
-        title: {
-            allowNull: false,
-            type: DataTypes.STRING,
-            validate: {
-                len: [1]
-            }
-        },
+  let Games = sequelize.define('Games', {
+    title: {
+      allowNull: false,
+      type: DataTypes.STRING,
+      validate: {
+        len: [1]
+      }
+    },
 
-        description: {
-            allowNull: false,
-            type: DataTypes.TEXT,
-            validate: {
-                len: [1]
-            }
-        },
+    description: {
+      allowNull: false,
+      type: DataTypes.TEXT,
+      validate: {
+        len: [1]
+      }
+    },
 
-        country_origin: {
-            type: DataTypes.STRING,
-            validate: {
-                len: [1]
-            }
-        },
+    country_origin: {
+      type: DataTypes.STRING,
+      validate: {
+        len: [1]
+      }
+    },
 
-        category: {
-            allowNull: false,
-            type: DataTypes.STRING,
-            validate: {
-                len: [1]
-            }
-        },
+    category: {
+      allowNull: false,
+      type: DataTypes.STRING,
+      validate: {
+        len: [1]
+      }
+    },
 
-        instructions: {
-            allowNull: false,
-            type: DataTypes.TEXT,
-            validate: {
-                len: [1]
-            }
-        },
-        createdAt: DataTypes.DATE,
-        updatedAt: DataTypes.DATE
-        // createdAt: {
-        //     allowNull: false,
-        //     type: DataTypes.DATE,
-        //     defaultValue: DataTypes.NOW
-        // }
+    instructions: {
+      allowNull: false,
+      type: DataTypes.TEXT,
+      validate: {
+        len: [1]
+      }
+    },
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
+    // createdAt: {
+    //     allowNull: false,
+    //     type: DataTypes.DATE,
+    //     defaultValue: DataTypes.NOW
+    // }
 
-        //association to the rules
-    });
+    //association to the rules
+  });
 
 
 
-    Games.sync();
+  Games.sync();
 
-    return Games;
+  return Games;
 
 };
 
