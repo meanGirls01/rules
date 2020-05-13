@@ -3,9 +3,34 @@ body {
     min-height: 100vh;
     padding: 0;
 }
-
+.card {
+    margin-top: 100px;
+}
 .input {
     width: 80%;
+    margin-left: 70px;
+}
+
+.game-title {
+    font-size: 50px;
+    text-align: center;
+}
+
+.category,
+.country,
+.people {
+    text-align: center;
+    font-size: 25px;
+}
+.description,
+.instructions {
+    font-size: 20px;
+    padding: 20px;
+}
+
+h3 {
+    text-align: center;
+    font-weight: bold;
 }
 
 .search {
@@ -13,7 +38,7 @@ body {
 }
 /* footer */
 .footer {
-    position: fixed;
+    /* position: fixed; */
     left: 0;
     bottom: 0;
     margin-top: 40px;

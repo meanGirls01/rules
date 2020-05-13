@@ -3,25 +3,36 @@ body {
     min-height: 100vh;
     padding: 0;
 }
-
-.hero {
-    margin-bottom: 100px;
+.gameadd {
+    margin-top: 30px;
 }
 
-
+.label {
+    color: lemonchiffon;
+}
+.fa-globe {
+    color: #222831;
+}
+.addcategory {
+    margin-top: 10px;
+}
+.submit,
+.cancel {
+    background-color: lemonchiffon;
+    color: #222831;
+}
 /* footer */
 .footer {
-    position: fixed;
     left: 0;
-    bottom: 0;
-    margin-top: 70px !important;
+    bottom: 10px;
+    margin-top: 40px;
     width: 100%;
-    /* background-color: #222831; */
+    background-color: #222831;
     color: lemonchiffon;
     text-align: center;
     height: 10px !important;
 }
-.fa {
+.fa-github-alt {
     color: lemonchiffon;
     margin: 10px;
 }
