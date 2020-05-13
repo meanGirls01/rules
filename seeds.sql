@@ -1,3 +1,5 @@
+USE gamerules_db;
+
 INSERT INTO Games (title, description, country_origin, category, instructions)
 
 VALUES ('Monopoly', 'In the game, players roll two six-sided dice to move around the game board, buying and trading properties, and developing them with houses and hotels. ... The game is named after the economic concept of monopoly—the domination of a market by a single entity.', 'United States', 'Board Game', 'Game Play
