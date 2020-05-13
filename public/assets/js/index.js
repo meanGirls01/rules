@@ -4,14 +4,23 @@ $(document).ready(function () {
 
     search.on('click', function (event) {
         event.preventDefault();
+
         let searchTerm = input.val().trim();
 
-        $.get('/api/games').then(function (data) {
-            if (searchTerm = data) {
-            $('.card').text(data);
-            };
-        });
+        searchGames(searchTerm);
     })
+
+    function searchGames(searchTerm) {
+        if (searchTerm === data) {
+
+            $.get("/api/games", function(data) {
+                games = data;
+                $('.card').text(data);
+                
+            });
+            
+        }
+    }
 
 
 })

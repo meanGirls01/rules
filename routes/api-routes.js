@@ -10,7 +10,7 @@ module.exports = function (app) {
         }).then(function (dbGame) {
             res.json(dbGame);
         }).catch(function (err) {
-            
+            res.json(err);
         });
     })
 
@@ -23,7 +23,9 @@ module.exports = function (app) {
             .then(function (dbGame) {
                     res.json(dbGame);
                 })
-                .catch(function (err) {});
+            .catch(function (err) {
+                res.json(err);
+                });
     });
 
     // POST route for saving a new game. You can create a game using the data on req.body

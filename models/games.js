@@ -19,7 +19,7 @@ module.exports = function (sequelize, DataTypes) {
 
         description: {
             allowNull: false,
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
             validate: {
                 len: [1]
             }
@@ -46,7 +46,14 @@ module.exports = function (sequelize, DataTypes) {
             validate: {
                 len: [1]
             }
-        }
+        },
+        createdAt: DataTypes.DATE,
+        updatedAt: DataTypes.DATE
+        // createdAt: {
+        //     allowNull: false,
+        //     type: DataTypes.DATE,
+        //     defaultValue: DataTypes.NOW
+        // }
 
         //association to the rules
     });
