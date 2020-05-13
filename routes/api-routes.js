@@ -1,6 +1,19 @@
 const db = require('../models');
 
 module.exports = function (app) {
+
+    app.get('api/games', function (req, res) {
+        db.Games.findAll({
+            where: {
+                title: req.body.title
+            }
+        }).then(function (dbGame) {
+            res.json(dbGame);
+        }).catch(function (err) {
+            
+        })
+    })
+
     // POST route for saving a new game. You can create a game using the data on req.body
     app.post('/api/SOMETHING', function (req, res) {
         db.Games.create(req.body)
