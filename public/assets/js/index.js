@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     let search = $('#search');
     let input = $('.input');
