@@ -6,12 +6,16 @@ $(document).ready(function () {
         event.preventDefault();
         let searchTerm = input.val().trim();
 
-        $.get('/api/games').then(function (data) {
+        $.get('/api/games', function(data) {
             if (searchTerm = data) {
-            $('.card').text(data);
+                console.log(data)
+            $('.game-title').text(data.title);
+            $('category').text(data.category)
+            $('country').text(data.country_origin)
+            $('gamedescription').text(data.description)
+            $('gameinstructions').text(data.instructions)
             };
         });
     })
-
 
 })
