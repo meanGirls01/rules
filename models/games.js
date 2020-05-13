@@ -60,6 +60,7 @@ module.exports = function (sequelize, DataTypes) {
   Games.sync();
 
   return Games;
+
 };
 
 //instruction table
