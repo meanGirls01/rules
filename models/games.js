@@ -59,9 +59,9 @@ module.exports = function (sequelize, DataTypes) {
 
 
 
-    Games.sync();
+  Games.sync();
 
-    return Games;
+  return Games;
 
 };
 
