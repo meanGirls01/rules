@@ -1,18 +1,20 @@
 const path = require('path');
-var isAuthenticated = require('../config/middleware/isAuthenticated');
+let isAuthenticated = require('../config/middleware/isAuthenticated');
+
 module.exports = function (app) {
 
   app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, '../public/index.html'));
   });
 
   app.get('/about', function (req, res) {
-    res.sendFile(path.join(__dirname, 'about.html'));
+    res.sendFile(path.join(__dirname, '../public/about.html'));
   });
 
   app.get('/addGame', isAuthenticated, function (req, res) {
-    res.sendFile(path.join(__dirname, 'addGame.html'));
+    res.sendFile(path.join(__dirname, '../public/addGame.html'));
   });
+
   app.get('/signup', function(req, res) {
     // If the user already has an account send them to the members page
     // if (req.user) {
