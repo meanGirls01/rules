@@ -5,6 +5,14 @@ body {
     font-weight: 300;
     background-color: #222831 !important;
 }
+nav {
+    background-color: lemonchiffon !important;
+    color: #222831 !important;
+    font-size: 20px;
+}
+.navbar-dropdown {
+    background-color: lemonchiffon !important;
+}
 .hero.is-success {
     background-color: #222831 !important;
 }

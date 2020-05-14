@@ -3,7 +3,14 @@ body {
     min-height: 100vh;
     padding: 0;
 }
-
+nav {
+    background-color: lemonchiffon !important;
+    color: #222831 !important;
+    font-size: 20px;
+}
+.navbar-dropdown {
+    background-color: lemonchiffon !important;
+}
 .hero {
     margin-bottom: 50px;
     /* background-color: aliceblue; */

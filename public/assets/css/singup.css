@@ -11,28 +11,26 @@ nav {
 .navbar-dropdown {
     background-color: lemonchiffon !important;
 }
-.gameadd {
-    margin-top: 30px;
-}
 
+.title,
+.subtitle,
 .label {
     color: lemonchiffon;
 }
-.fa-globe {
-    color: #222831;
+.fa-lock,
+.fa-envelope,
+.fa-at {
+    color: #222831 !important;
 }
-.addcategory {
-    margin-top: 10px;
-}
-.submit,
-.cancel {
-    background-color: lemonchiffon;
+button {
+    background-color: lemonchiffon !important;
     color: #222831;
 }
 /* footer */
 .footer {
+    position: fixed;
     left: 0;
-    bottom: 10px;
+    bottom: 0;
     margin-top: 40px;
     width: 100%;
     background-color: #222831;
@@ -40,7 +38,7 @@ nav {
     text-align: center;
     height: 10px !important;
 }
-.fa-github-alt {
+.fa {
     color: lemonchiffon;
     margin: 10px;
 }
