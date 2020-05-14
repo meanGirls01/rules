@@ -45,15 +45,15 @@
                 </div>
                 <div id="navbarMenu" class="navbar-menu">
                     <div class="navbar-end">
-                        <a class="navbar-item" href="index.html"> Home </a>
-                        <a class="navbar-item" href="addGame.html"> Add a Game</a>
-                        <a class="navbar-item" href="about.html"> About/Team </a>
+                        <a class="navbar-item is-active" href="/"> Home </a>
+                        <a class="navbar-item" href="/addGame"> Add a Game</a>
+                        <a class="navbar-item" href="/about"> About/Team </a>
                         <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link is-active">Account</a>
+                            <a class="navbar-link" href="">Account</a>
                             <div class="navbar-dropdown">
-                                <a class="navbar-item" href="member.html"> My Account</a>
-                                <a class="navbar-item" href="login.html">Sing In/ Sing Up</a>
-                                <a class="navbar-item">Logout</a>
+                                <a class="navbar-item" href="/member"> My Account</a>
+                                <a class="navbar-item" href="/login">Sign In/ Sign Up</a>
+                                <a class="navbar-item" href="/logout">Logout</a>
                             </div>
                         </div>
                     </div>
@@ -97,7 +97,7 @@
                                             Remember me
                                         </label>
                                     </div>
-                                    <button class="button is-block is-info is-large is-fullwidth">
+                                    <button class="button is-block is-info is-large is-fullwidth" href="/member">
                                         Login <i class="fa fa-sign-in" aria-hidden="true"></i>
                                     </button>
                                 </form>
@@ -126,5 +126,6 @@
         ></script>
 
         <script src="assets/js/index.js" type="text/javascript"></script>
+        <script src ="passport/login.js" type="text/java"></script>
     </body>
 </html>
