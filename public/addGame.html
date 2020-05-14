@@ -2,9 +2,9 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>STICKLER'S PARADISE</title>
-
-        <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css" />
         <link
             href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
             rel="stylesheet"
@@ -17,7 +17,7 @@
 
     <body>
         <!-- START NAV -->
-        <nav class="navbar">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
             <!-- container for the whole nav opens -->
             <div class="container">
                 <!-- logo nav opens -->
@@ -25,6 +25,17 @@
                     <a class="navbar-item" href="index.html">
                         <!-- <img src="" class="logo" alt="Stickler's Paradise" /> -->
                         STICKLER'S PARADISE
+                    </a>
+                    <a
+                        role="button"
+                        class="navbar-burger burger"
+                        aria-label="menu"
+                        aria-expanded="false"
+                        data-target="navbarBasicExample"
+                    >
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
                     </a>
                     <!-- logos nav closes -->
                 </div>
@@ -50,7 +61,7 @@
                             </a>
                             <!-- inside of the dropdown opens-->
                             <div class="navbar-dropdown">
-                                <a class="navbar-item">Dashboard</a>
+                                <a class="navbar-item" href="member.html"> My Account</a>
                                 <a class="navbar-item" href="login.html">Sing In/ Sing Up</a>
                                 <a class="navbar-item">Logout</a>
                                 <!-- inside of the dropdown closes-->
@@ -143,11 +154,12 @@
             <p>STICKLER'S PARADISE</p>
         </footer>
 
-        <!-- <script src=""></script> -->
         <script
             src="https://code.jquery.com/jquery-3.5.1.js"
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
             crossorigin="anonymous"
         ></script>
+
+        <script src="assets/js/index.js" type="text/javascript"></script>
     </body>
 </html>

@@ -1,0 +1,77 @@
+body {
+    background-color: #222831 !important;
+    min-height: 100vh;
+    padding: 0;
+}
+nav {
+    background-color: lemonchiffon !important;
+    color: #222831 !important;
+    font-size: 20px;
+}
+.navbar-dropdown {
+    background-color: lemonchiffon !important;
+}
+
+.menu {
+    margin: 60px;
+    width: 200px;
+    border: 4px solid lemonchiffon;
+    padding: 10px;
+}
+
+.title {
+    color: lemonchiffon;
+    text-align: center;
+    font-size: 80px;
+    padding-bottom: 50px;
+}
+section {
+    border: lemonchiffon solid 4px;
+    margin-top: 60px;
+}
+.subtitle {
+    color: lemonchiffon;
+    text-align: center;
+    font-size: 40px;
+}
+
+.menu-label-spacing {
+    color: lemonchiffon;
+}
+
+.footer {
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    margin-top: 40px;
+    width: 100%;
+    background-color: #222831;
+    color: lemonchiffon;
+    text-align: center;
+}
+.fa {
+    color: lemonchiffon;
+    margin: 10px;
+}
+
+@media screen and (max-width: 989px) {
+    .menu {
+        margin: 0;
+        margin-top: 10px;
+        width: 100%;
+        padding: 3px;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 50px;
+    }
+
+    .subtitle {
+        font-size: 30px;
+    }
+
+    .section {
+        margin: 0;
+    }
+}

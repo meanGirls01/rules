@@ -16,7 +16,7 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         />
-        <link href="assets/css/style.css" rel="stylesheet" />
+        <link href="assets/css/member.css" rel="stylesheet" />
     </head>
 
     <body>
@@ -24,7 +24,7 @@
         <nav class="navbar">
             <div class="container">
                 <div class="navbar-brand">
-                    <a class="navbar-item" href="/">
+                    <a class="navbar-item" href="index.html">
                         <!-- <img src="" class="logo" alt="Stickler's Paradise" /> -->
                         STICKLER'S PARADISE</a
                     >
@@ -42,14 +42,14 @@
                 </div>
                 <div id="navbarMenu" class="navbar-menu">
                     <div class="navbar-end">
-                        <a class="navbar-item is-active" href="/"> Home </a>
-                        <a class="navbar-item" href="/addGame"> Add a Game</a>
-                        <a class="navbar-item" href="/about"> About/Team </a>
+                        <a class="navbar-item is-active" href="index.html"> Home </a>
+                        <a class="navbar-item" href="addGame.html"> Add a Game</a>
+                        <a class="navbar-item" href="about.html"> About/Team </a>
                         <div class="navbar-item has-dropdown is-hoverable">
                             <a class="navbar-link" href="">Account</a>
                             <div class="navbar-dropdown">
-                                <a class="navbar-item" href="/members"> My Account</a>
-                                <a class="navbar-item" href="/login">Sing In/ Sing Up</a>
+                                <a class="navbar-item" href="member.html"> My Account</a>
+                                <a class="navbar-item" href="login.html">Sing In/ Sing Up</a>
                                 <a class="navbar-item">Logout</a>
                             </div>
                         </div>
@@ -58,51 +58,36 @@
             </div>
             <!-- END NAV -->
         </nav>
-        <!-- container -->
-        <div class="container">
-            <div class="search">
-                <input class="input" type="text" placeholder="Search your rules" />
-                <button id="search" class="button is-rounded">Search</button>
+        <div class="columns">
+            <div class="column is-one-quarter">
+                <aside class="menu">
+                    <p class="menu-label-spacing">
+                        General
+                    </p>
+                    <ul class="menu-list">
+                        <li><a>Dashboard</a></li>
+                        <li><a>My games</a></li>
+                        <li><a>Favorites</a></li>
+                    </ul>
+                    <p class="menu-label-spacing">
+                        Settings
+                    </p>
+                    <ul class="menu-list">
+                        <li><a>Update Password</a></li>
+                    </ul>
+                </aside>
             </div>
-            <!-- cards -->
-
-            <div class="container card-info">
-                <ul class="collapsible popout">
-                    <li>
-                        <div class="collapsible-header">
-                            <h4>Game Title</h4>
-                        </div>
-                        <div class="collapsible-body">
-                            <span class="game-title"> </span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header">
-                            <h4>Category and Country of Origin</h4>
-                        </div>
-                        <div class="collapsible-body">
-                            <span class="category"></span>
-                            <span class="country"></span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header"><h4>Description</h4></div>
-                        <div class="collapsible-body">
-                            <span class="game-description"></span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header">
-                            <h4>Game Instructions</h4>
-                        </div>
-                        <div class="collapsible-body">
-                            <span class="game-instructions"></span>
-                        </div>
-                    </li>
-                </ul>
+            <div class="column is-three-fifths">
+                <section class="section">
+                    <div class="container">
+                        <h1 class="title">Welcome</h1>
+                        <h2 class="subtitle">
+                            Sammantha
+                        </h2>
+                    </div>
+                </section>
             </div>
         </div>
-
         <!-- footer -->
         <footer class="footer">
             <a href="https://github.com/meanGirls01/rules"
