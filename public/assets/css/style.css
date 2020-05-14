@@ -9,6 +9,9 @@ nav {
     color: #222831 !important;
     font-size: 20px;
 }
+.navbar-burger span {
+    color: #222831 !important;
+}
 .navbar-dropdown {
     background-color: lemonchiffon !important;
 }
