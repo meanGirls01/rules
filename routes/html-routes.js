@@ -29,9 +29,9 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, '../public/login.html'));
   });
   // Route for logging user out
-  app.get("/logout", function(req, res) {
+  app.get('/logout', function(req, res) {
     req.logout();
-    res.redirect("/");
+    res.redirect('/');
   });
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
