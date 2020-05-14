@@ -1,5 +1,9 @@
 // Requiring our models and passport as we've configured it
-var db = require('./models');
+// const path = require('path');
+
+var db = require('../models'); 
+// path.join(__dirname, 'models');
+
 var passport = require('../config/passport');
 
 module.exports = function(app) {

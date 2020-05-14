@@ -2,6 +2,7 @@ const express = require('express');
 var session = require('express-session');
 // Requiring passport as we've configured it
 var passport = require('./config/passport');
+// const path = require('path');
 
 
 // Sets up the Express App
@@ -26,10 +27,10 @@ app.use(passport.session());
 // Routes
 // =============================================================
 require('./routes/api-routes.js')(app);
-require('./routes/passport-routes/api-routes.js')(app);
+require('./routes/pass-api-routes.js')(app);
 // Requiring our routes
 require('./routes/html-routes.js')(app);
-require('./routes/passport-routes/html-routes.js')(app);
+require('./routes/pass-html-routes.js')(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
