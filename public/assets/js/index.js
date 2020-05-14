@@ -7,14 +7,18 @@ $(document).ready(function () {
     event.preventDefault();
     let searchTerm = input.val().trim();
 
-    $.get('/api/games', function (data) {
-      if ((searchTerm = data)) {
+    $.get('/api/' + searchTerm, function (data) {
+      if (data.length !== 0) {
+
         console.log(data);
-        $('.game-title').text(data.title);
-        $('category').text(data.category);
-        $('country').text(data.country_origin);
-        $('game-description').text(data.description);
-        $('game-instructions').text(data.instructions);
+        for (var i = 0; i < data.length; i++) {
+          $('.game-title').text(data[i].title);
+          $('.category').text(data[i].category);
+          $('.country').text(data[i].country_origin);
+          $('.gamedescription').text(data[i].description);
+          $('.gameinstructions').text(data[i].instructions);
+        };
+
       }
     });
   });
