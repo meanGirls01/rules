@@ -15,8 +15,8 @@ $(document).ready(function () {
           $('.game-title').text(data[i].title);
           $('.category').text(data[i].category);
           $('.country').text(data[i].country_origin);
-          $('.gamedescription').text(data[i].description);
-          $('.gameinstructions').text(data[i].instructions);
+          $('.game-description').text(data[i].description);
+          $('.game-instructions').text(data[i].instructions);
         };
 
       }
