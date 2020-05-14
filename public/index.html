@@ -11,6 +11,10 @@
             integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
             crossorigin="anonymous"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        />
         <link href="assets/css/style.css" rel="stylesheet" />
     </head>
 
@@ -33,7 +37,7 @@
                             <a class="navbar-link" href="">Account</a>
                             <div class="navbar-dropdown">
                                 <a class="navbar-item"> Dashboard</a>
-                                <a class="navbar-item">Sing In/ Sing Up</a>
+                                <a class="navbar-item" href="login.html">Sing In/ Sing Up</a>
                                 <a class="navbar-item">Logout</a>
                             </div>
                         </div>
@@ -45,41 +49,49 @@
         <!-- container -->
         <div class="container">
             <div class="search">
-                <input class="input is-rounded" type="text" placeholder="Search you rules" />
+                <input class="input" type="text" placeholder="Search your rules" />
                 <button id="search" class="button is-rounded">Search</button>
             </div>
             <!-- cards -->
-   <div class="card">
-    <div class="card-content">
-        
-        <p class="title game-title">
-            Game name</p>
-            <ul>
-                <li class="category">Category</li>
-                <li class="country">Country</li>
-            </ul>
-        
-    </div> 
-<hr>
-<!-- <div class="people">
-    <h3>How many people play</h3>
-    <p>5</p>
-</div> -->
-<hr>
-    <div class="description">
-        <h3 class="title">Description</h3>
-       <p class="gamedescription">
-    </p>
-</div>
-    <hr>
 
-    <div class="instructions">
-        <h3 class="title">Instructions</h3>
-        <p class= "gameinstructions"></p>
-    </div>
+            <div class="container card-info">
+                <ul class="collapsible popout">
+                    <li>
+                        <div class="collapsible-header">
+                            <h4>Game Title</h4>
+                        </div>
+                        <div class="collapsible-body">
+                            <span class="game-title"> </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">
+                            <h4>Category and Country of Origin</h4>
+                        </div>
+                        <div class="collapsible-body">
+                            <span class="category"></span>
+                            <span class="country"></span> >
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><h4>Description</h4></div>
+                        <div class="collapsible-body">
+                            <span class="game-description"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header">
+                            <h4>Game Instructions</h4>
+                        </div>
+                        <div class="collapsible-body">
+                            <span class="game-instructions"></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-
-</div>
+  
         <!-- footer -->
         <footer class="footer">
             <a href="https://github.com/meanGirls01/rules"
@@ -88,12 +100,13 @@
             <p>STICKLER'S PARADISE</p>
         </footer>
 
-        
         <script
             src="https://code.jquery.com/jquery-3.5.1.js"
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
             crossorigin="anonymous"
         ></script>
+
         <script src="assets/js/index.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </body>
 </html>

@@ -1,5 +1,5 @@
-
 $(document).ready(function () {
+  $('.collapsible').collapsible();
   let search = $('#search');
   let input = $('.input');
 
@@ -18,8 +18,8 @@ $(document).ready(function () {
           $('.gamedescription').text(data[i].description);
           $('.gameinstructions').text(data[i].instructions);
         };
+
       }
     });
   });
-
 });
