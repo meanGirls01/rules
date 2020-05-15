@@ -1,12 +1,18 @@
 // const e = require("express");
 
 $(document).ready(function () {
+  console.log('loaded index');
   let burger = document.querySelector('.navbar-burger');
   let menu = document.querySelector('.navbar-menu');
   burger.addEventListener('click', function () {
     burger.classList.toggle('is-active');
     menu.classList.toggle('is-active');
   });
+
+    $.get('/api/user_data').then(function (data) {
+        console.log(data);
+        $('.member-name').text(data.username);
+    });
 
   let search = $('#search');
   let input = $('.input');
@@ -19,11 +25,11 @@ $(document).ready(function () {
       if (data.length !== 0) {
         console.log(data);
         for (var i = 0; i < data.length; i++) {
-          $('.game-title').text(data[i].title);
-          $('.category').text(data[i].category);
-          $('.country').text(data[i].country_origin);
-          $('.game-description').text(data[i].description);
-          $('.game-instructions').text(data[i].instructions);
+          // $('.game-title').text(data[i].title);
+          // $('.category').text(data[i].category);
+          // $('.country').text(data[i].country_origin);
+          // $('.game-description').text(data[i].description);
+          // $('.game-instructions').text(data[i].instructions);
 
           let collapsible = `<ul class="collapsible popout">
     <li>
