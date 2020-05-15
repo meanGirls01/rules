@@ -19,7 +19,7 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         />
-        <link href="assets/css/member.css" rel="stylesheet" />
+        <link href="assets/css/all.css" rel="stylesheet" />
     </head>
 
     <body>
@@ -27,7 +27,7 @@
         <nav class="navbar">
             <div class="container">
                 <div class="navbar-brand">
-                    <a class="navbar-item" href="index.html">
+                    <a class="navbar-item" href="/">
                         <!-- <img src="" class="logo" alt="Stickler's Paradise" /> -->
                         STICKLER'S PARADISE</a
                     >
@@ -45,15 +45,15 @@
                 </div>
                 <div id="navbarMenu" class="navbar-menu">
                     <div class="navbar-end">
-                        <a class="navbar-item" href="/"> Home </a>
+                        <a class="navbar-item " href="/"> Home </a>
                         <a class="navbar-item" href="/addGame"> Add a Game</a>
-                        <a class="navbar-item" href="/all"> See all Games</a>
+                        <a class="navbar-item is-active" href="/all"> See all Games</a>
                         <a class="navbar-item" href="/about"> About/Team </a>
                         <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link" href="">Account</a>
+                            <a class="navbar-link">Account</a>
                             <div class="navbar-dropdown">
-                                <a class="navbar-item is-active" href="/member"> My Account</a>
-                                <a class="navbar-item" href="/login">Sign In / Sign Up</a>
+                                <a class="navbar-item" href="/member"> My Account</a>
+                                <a class="navbar-item" href="/login">Sign In/ Sign Up</a>
                                 <a class="navbar-item" href="/logout">Logout</a>
                             </div>
                         </div>
@@ -62,36 +62,8 @@
             </div>
             <!-- END NAV -->
         </nav>
-        <div class="columns">
-            <div class="column is-one-quarter">
-                <aside class="menu">
-                    <p class="menu-label-spacing">
-                        General
-                    </p>
-                    <ul class="menu-list">
-                        <li><a>Dashboard</a></li>
-                        <li><a>My games</a></li>
-                        <li><a>Favorites</a></li>
-                    </ul>
-                    <p class="menu-label-spacing">
-                        Settings
-                    </p>
-                    <ul class="menu-list">
-                        <li><a>Update Password</a></li>
-                    </ul>
-                </aside>
-            </div>
-            <div class="column is-three-fifths">
-                <section class="section">
-                    <div class="container">
-                        <h1 class="title">Welcome</h1>
-                        <h2 class="subtitle">
-                            Sammantha
-                        </h2>
-                    </div>
-                </section>
-            </div>
-        </div>
+        <div class="container card-info" id="all"></div>
+
         <!-- footer -->
         <footer class="footer">
             <a href="https://github.com/meanGirls01/rules"
@@ -107,6 +79,5 @@
         ></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script src="assets/js/index.js" type="text/javascript"></script>
-        <script src="./passport/member.js" type="text/javascript"></script>
     </body>
 </html>
