@@ -58,44 +58,24 @@
                                 <a class="navbar-item" href="/member"> My Account</a>
                                 <a class="navbar-item" href="/login">Sign In/ Sign Up</a>
                                 <a class="navbar-item" href="/logout">Logout</a>
-                                <!-- inside of the dropdown closes-->
                             </div>
-                            <!-- nav bar drop down close-->
                         </div>
-                        <!-- nav bar information closes -->
                     </div>
-                    <!-- nav bar end closes-->
                 </div>
-                <!-- container for the whole nav closes -->
             </div>
             <!-- END NAV -->
         </nav>
         <!-- container for content opens  -->
         <div class="container gameadd">
-            <div class="field username">
-                <label class="label">Name</label>
-                <div class="control">
-                    <input class="input" type="text" placeholder="Name" />
-                </div>
-            </div>
-            <div class="field email">
-                <label class="label">Email</label>
-                <div class="control has-icons-left has-icons-right">
-                    <input class="input is-danger" type="email" placeholder="Email " />
-                    <span class="icon is-small is-left">
-                        <i class="fa fa-envelope"></i>
-                    </span>
-                    <span class="icon is-small is-right">
-                        <i class="fa fa-exclamation-triangle"></i>
-                    </span>
-                </div>
-                <p class="help is-danger">This email is invalid</p>
-            </div>
             <div class="field gamename">
                 <label class="label">Game Name</label>
                 <div class="control">
-                    <input class="name-input" type="text" placeholder="Game Name" />
+                    <input class="input" id="name-input" type="text" placeholder="Game Name" />
                 </div>
+            </div>
+            <div class="addcategory">
+                <label class="label">Category</label>
+                <input class="input" id="category-input" type="text" placeholder="Category" />
             </div>
             <p class="control has-icons-left">
                 <label class="label">Country of Origin</label>
@@ -111,14 +91,7 @@
                     </select>
                 </span>
             </p>
-            <div class="addcategory">
-                <label class="label">Category</label>
-                <input class="category-input" type="text" placeholder="Category" />
-            </div>
-            <!-- <div class="numpeople">
-                <label class="label">Number of People</label>
-                <input class="input" type="text" placeholder="Number of people" />
-            </div> -->
+
             <div class="field description">
                 <label class="label">Description</label>
                 <div class="control">
