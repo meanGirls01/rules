@@ -15,6 +15,10 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, '../public/addGame.html'));
   });
 
+  app.get('/all', function (req, res) {
+    res.sendFile(path.join(__dirname, '../public/all.html'));
+  });
+
   app.get('/signup', function(req, res) {
     // If the user already has an account send them to the members page
     // if (req.user) {
