@@ -13,10 +13,10 @@ $(document).ready(function () {
     event.preventDefault();
 
     let newGame = {
-      title: $('.name-input').val().trim(),
+      title: $('#name-input').val().trim(),
       description: $('.description-input').val().trim(),
       country_origin: $('#dropdown').val().trim(),
-      category: $('.category-input').val().trim(),
+      category: $('#category-input').val().trim(),
       instructions: $('.instructions-input').val().trim(),
     };
 
