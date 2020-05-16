@@ -1,24 +1,30 @@
-// const e = require("express");
-
+// code that runs when document is ready
 $(document).ready(function () {
+
+  // activates nav bar to be functional
   let burger = document.querySelector('.navbar-burger');
   let menu = document.querySelector('.navbar-menu');
-  burger.addEventListener('click', function () {
+  burger.addEventListener('click', () => {
     burger.classList.toggle('is-active');
     menu.classList.toggle('is-active');
   });
 
+  // grabbing elements from index.html
   let search = $('#search');
   let input = $('.input');
 
-  search.on('click', function (event) {
+  // adding event listener to search button
+  search.on('click', (event) => {
     event.preventDefault();
+
+    // variable for value of search term
     let searchTerm = input.val().trim();
 
-    $.get('/api/' + searchTerm, function (data) {
+    // get call to retrieve data selected from api using search term value
+    $.get('/api/' + searchTerm, (data) => {
       if (data.length !== 0) {
-        console.log(data);
         for (var i = 0; i < data.length; i++) {
+          // template literal for printing data to page
           let collapsible = `<ul class="collapsible popout">
     <li>
         <div class="collapsible-header">${data[i].title}</div>
@@ -44,7 +50,7 @@ $(document).ready(function () {
         };
       }
       else {
-        $('#put-cards-here').text('No games found!');
+        $('#put-cards-here').addClass('.no-games').text('No games found!');
       }
     });
   });
