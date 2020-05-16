@@ -1,10 +1,10 @@
 const db = require('../models'); 
 const passport = require('../config/passport');
 
-module.exports = function(app) {
+module.exports = (app) => {
   // Using the passport.authenticate middleware with our local strategy.
  
-  app.post('/api/login', passport.authenticate('local'), function(req, res) {
+  app.post('/api/login', passport.authenticate('local'), (req, res) => {
     res.json({
       email: req.user.email,
       id: req.user.id
@@ -12,7 +12,7 @@ module.exports = function(app) {
   });
 
   // Route for signing up a user. 
-  app.post('/api/signup', function(req, res) {
+  app.post('/api/signup', (req, res) => {
     db.User.create({
       email: req.body.email,
       password: req.body.password
@@ -26,13 +26,13 @@ module.exports = function(app) {
   });
 
   // Route for logging user out
-  app.get('/logout', function(req, res) {
+  app.get('/logout', (req, res) => {
     req.logout();
     res.redirect('/');
   });
 
   // Route for getting some data about our user to be used client side
-  app.get('/api/user_data', function(req, res) {
+  app.get('/api/user_data', (req, res) => {
     if (!req.user) {
       // The user is not logged in, send back an empty object
       res.json({});

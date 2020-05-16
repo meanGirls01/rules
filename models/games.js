@@ -1,4 +1,4 @@
-module.exports = function (sequelize, DataTypes) {
+module.exports = (sequelize, DataTypes) => {
   let Games = sequelize.define('Games', {
     title: {
       allowNull: false,
