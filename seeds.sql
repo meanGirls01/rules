@@ -1,3 +1,4 @@
+-- seeds for database added to Games table. insert this in your workbench after the schema syntax if you are running it on your local machine.
 USE gamerules_db;
 
 INSERT INTO Games (title, description, country_origin, category, instructions)
