@@ -19,12 +19,6 @@ $(document).ready(function () {
       if (data.length !== 0) {
         console.log(data);
         for (var i = 0; i < data.length; i++) {
-          $('.game-title').text(data[i].title);
-          $('.category').text(data[i].category);
-          $('.country').text(data[i].country_origin);
-          $('.game-description').text(data[i].description);
-          $('.game-instructions').text(data[i].instructions);
-
           let collapsible = `<ul class="collapsible popout">
     <li>
         <div class="collapsible-header">${data[i].title}</div>
@@ -45,7 +39,6 @@ $(document).ready(function () {
         </div>
     </li>
 </ul>`;
-          $('#put-cards-here').html(collapsible);
           $('#put-cards-here').append(collapsible);
           $('.collapsible').collapsible();
         };
