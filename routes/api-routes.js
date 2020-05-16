@@ -1,26 +1,28 @@
 const db = require('../models');
 
 module.exports = function (app) {
-//find all games
+  // Find all games
   app.get('/api/all', function (req, res) {
     db.Games.findAll({}).then(function (results) {
       res.json(results);
     });
   });
-
+  //  Get game by title
   app.get('/api/:title', function (req, res) {
     console.log(req.params);
     db.Games.findAll({
       where: {
         title: req.params.title
       }
-    }).then(function (dbGame) {
-      res.json(dbGame);
-    }).catch(function (err) {
-      res.json(err);
-    });
+    })
+      .then(function (dbGame) {
+        res.json(dbGame);
+      })
+      .catch(function (err) {
+        res.json(err);
+      });
   });
-
+  //  Get Game by ID
   app.get('/api/games/:id', function (req, res) {
     db.Games.findOne({
       where: {
@@ -41,31 +43,31 @@ module.exports = function (app) {
     console.log(req.params);
 
     db.Games.create({
-      title: req.body.title, 
+      title: req.body.title,
       description: req.body.description,
       country_origin: req.body.country_origin,
       category: req.body.category,
       instructions: req.body.instructions
     })
-      .then(function(dbGame){
+      .then(function (dbGame) {
         res.json(dbGame);
       })
-      .catch(function(err) {
+      .catch(function (err) {
         res.json(err);
       });
   });
 
   // DELETE route for deleting game. You can access the game's id in req.params.id
   app.delete('/api/games/:id', function (req, res) {
-    db.Games.destroy( {
+    db.Games.destroy({
       where: {
-        id: req.params.id 
+        id: req.params.id
       }
     })
-      .then(function(){
+      .then(function () {
         res.json(true);
       })
-      .catch(function(err) {
+      .catch(function (err) {
         res.json(err);
       });
   });
@@ -77,10 +79,10 @@ module.exports = function (app) {
         id: req.params.id
       }
     })
-      .then(function(dbGame){
+      .then(function (dbGame) {
         res.json(dbGame);
       })
-      .catch(function(err) {
+      .catch(function (err) {
         res.json(err);
       });
   });
