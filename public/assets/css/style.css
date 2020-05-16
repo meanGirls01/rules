@@ -46,6 +46,10 @@ button {
 .search {
     margin-top: 50px;
 }
+.no-games {
+    color: lemonchiffon;
+    font-size: 30px;
+}
 /* footer */
 .footer {
     position: fixed;
