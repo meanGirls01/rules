@@ -23,6 +23,7 @@ $(document).ready(function () {
     $.post('/api/newgame', newGame)
       .then(function (data) {
         console.log(data);
+        window.location.replace('/all');
       });
 
     $('.name-input').val('');
