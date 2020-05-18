@@ -1,10 +1,3 @@
-//game table
-//name of game
-//description
-//country of origin
-//game time
-//rule ids foreign key?
-//make game first, attach id to all the rules for said game
 
 module.exports = function (sequelize, DataTypes) {
   let Games = sequelize.define('Games', {
@@ -46,7 +39,7 @@ module.exports = function (sequelize, DataTypes) {
         len: [1]
       }
     },
-    
+
     createdAt: DataTypes.DATE,
     updatedAt: DataTypes.DATE
 
@@ -69,13 +62,3 @@ module.exports = function (sequelize, DataTypes) {
 
 };
 
-//instruction table
-//each instruction would be its one table with an id
-//game_id foreign key to id of game name
-// varchar255 not null
-// varchar255
-// varchar255
-// varchar255
-//loop through and create
-
-//two models,

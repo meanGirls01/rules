@@ -27,9 +27,10 @@ app.use(passport.session());
 // Routes
 // =============================================================
 require('./routes/api-routes.js')(app);
-require('./routes/pass-api-routes.js')(app);
-// Requiring our routes
 require('./routes/html-routes.js')(app);
+
+// Requiring our routes
+require('./routes/pass-api-routes.js')(app);
 require('./routes/pass-html-routes.js')(app);
 
 // Syncing our sequelize models and then starting our Express app
