@@ -25,7 +25,7 @@ $(document).ready(function () {
       instructions: $('.instructions-input').val().trim(),
     };
 
-        // post call to add new game(s) to database
+    // post call to add new game(s) to database
 
     $.post('/api/newgame', newGame)
       .then(function (data) {
