@@ -1,3 +1,4 @@
+
 module.exports = (sequelize, DataTypes) => {
   let Games = sequelize.define('Games', {
     title: {
@@ -38,10 +39,25 @@ module.exports = (sequelize, DataTypes) => {
         len: [1]
       }
     },
+
     createdAt: DataTypes.DATE,
     updatedAt: DataTypes.DATE
+
   });
+
+  //association to the rules
+  Games.associate = function (models) {
+    models.Games.belongsTo(models.User, {
+      onDelete: 'CASCADE',
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+
+
   Games.sync();
 
   return Games;
 };
+

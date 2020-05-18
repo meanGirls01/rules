@@ -1,6 +1,8 @@
 // code that runs when document is ready
 $(document).ready(function () {
+
   // activates nav bar to be functional
+
   let burger = document.querySelector('.navbar-burger');
   let menu = document.querySelector('.navbar-menu');
   burger.addEventListener('click', () => {
@@ -8,7 +10,13 @@ $(document).ready(function () {
     menu.classList.toggle('is-active');
   });
 
+  $.get('/api/user_data').then(function (data) {
+    console.log(data);
+    $('.member-name').text(data.username);
+  });
+
   // grabbing elements from index.html
+
   let search = $('#search');
   let input = $('.input');
 
@@ -22,10 +30,11 @@ $(document).ready(function () {
     // variable for value of search term
     let searchTerm = input.val().trim();
 
+    $.get('/api/games/' + searchTerm, function (data) {
     // get call to retrieve data selected from api using search term value
-    $.get('/api/' + searchTerm, data => {
       if (data.length !== 0) {
         for (var i = 0; i < data.length; i++) {
+
           // template literal for printing data to page
           let collapsible = `<ul class="collapsible popout">
     <li>

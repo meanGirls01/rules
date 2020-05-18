@@ -7,8 +7,9 @@ module.exports =  (app) => {
       res.json(results);
     });
   });
+
   //  Get game by title
-  app.get('/api/:title', (req, res) => {
+  app.get('/api/games/:title', (req, res) => {
     console.log(req.params);
     db.Games.findAll({
       where: {
@@ -47,7 +48,8 @@ module.exports =  (app) => {
       description: req.body.description,
       country_origin: req.body.country_origin,
       category: req.body.category,
-      instructions: req.body.instructions
+      instructions: req.body.instructions,
+      UserId: req.user.id
     })
       .then(function (dbGame) {
         res.json(dbGame);

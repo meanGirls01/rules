@@ -23,12 +23,14 @@ app.use(passport.session());
 
 // =================Routes============================================
 require('./routes/api-routes.js')(app);
-require('./routes/pass-api-routes.js')(app);
-// Requiring our routes
 require('./routes/html-routes.js')(app);
+
+// Requiring our routes
+require('./routes/pass-api-routes.js')(app);
 require('./routes/pass-html-routes.js')(app);
 
 // Syncing our sequelize models and then starting our Express app
+
 db.sequelize.sync({ force: false }).then(function () {
   app.listen(PORT, function () {
     console.log('App listening on PORT ' + PORT);

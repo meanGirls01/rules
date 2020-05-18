@@ -26,9 +26,13 @@ $(document).ready(function () {
     };
 
     // post call to add new game(s) to database
-    $.post('/api/newgame', newGame);
-    // .then(function (data) {
-    // });
+
+    $.post('/api/newgame', newGame)
+      .then(function (data) {
+        console.log(data);
+        window.location.replace('/all');
+      });
+
 
     // emptying values after inputs are submitted
     $('.name-input').val('');

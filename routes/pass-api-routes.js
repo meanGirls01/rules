@@ -6,6 +6,7 @@ module.exports = (app) => {
  
   app.post('/api/login', passport.authenticate('local'), (req, res) => {
     res.json({
+      username: req.user.username,
       email: req.user.email,
       id: req.user.id
     });
@@ -14,6 +15,7 @@ module.exports = (app) => {
   // Route for signing up a user. 
   app.post('/api/signup', (req, res) => {
     db.User.create({
+      username: req.body.username,
       email: req.body.email,
       password: req.body.password
     })
@@ -32,14 +34,18 @@ module.exports = (app) => {
   });
 
   // Route for getting some data about our user to be used client side
+
   app.get('/api/user_data', (req, res) => {
     if (!req.user) {
       // The user is not logged in, send back an empty object
+      console.log('number 1');
       res.json({});
     } else {
+      console.log('number 2');
       // Otherwise send back the user's email and id
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
+        username: req.user.username,
         email: req.user.email,
         id: req.user.id
       });
