@@ -19,36 +19,49 @@ nav {
 .text {
     width: 50%;
     margin-left: 25%;
+    font-size: 20px;
 }
 
-.hero,
-.title,
-.subtitle {
+.hero {
     color: lemonchiffon;
 }
+
+.meet,
+.title {
+    color: lemonchiffon;
+    font-size: 40px;
+}
+
+.meet {
+    text-align: center;
+}
+
+
 .is-4,
 .is-6 {
     color: #222831;
 }
-.content {
-    text-align: center;
-}
+
 .is-4by3 {
     padding: 70px;
 }
 
+.card {
+    margin: 10px;
+    width: 18rem;
+    height: 630px;
+}
 .card-footer {
-    margin-top: 10px;
-    margin-bottom: -20px !important;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
     border: none !important;
 }
 
 .team {
     margin: 50px;
-}
-
-.card {
-    margin: 10px;
 }
 
 /* footer */
@@ -63,4 +76,3 @@ nav {
     color: lemonchiffon;
     margin: 10px;
 }
-

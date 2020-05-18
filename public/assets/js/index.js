@@ -1,10 +1,11 @@
-// const e = require("express");
-
+// code that runs when document is ready
 $(document).ready(function () {
-  console.log('loaded index');
+
+  // activates nav bar to be functional
+
   let burger = document.querySelector('.navbar-burger');
   let menu = document.querySelector('.navbar-menu');
-  burger.addEventListener('click', function () {
+  burger.addEventListener('click', () => {
     burger.classList.toggle('is-active');
     menu.classList.toggle('is-active');
   });
@@ -14,23 +15,27 @@ $(document).ready(function () {
     $('.member-name').text(data.username);
   });
 
+  // grabbing elements from index.html
+
   let search = $('#search');
   let input = $('.input');
 
-  search.on('click', function (event) {
+  // adding event listener to search button
+  search.on('click', event => {
     event.preventDefault();
+
+    // replacing the image on the screen for the cards
+    $('#screenlogo').attr('style', ' display:none');
+
+    // variable for value of search term
     let searchTerm = input.val().trim();
 
     $.get('/api/games/' + searchTerm, function (data) {
+    // get call to retrieve data selected from api using search term value
       if (data.length !== 0) {
-        console.log(data);
         for (var i = 0; i < data.length; i++) {
-          // $('.game-title').text(data[i].title);
-          // $('.category').text(data[i].category);
-          // $('.country').text(data[i].country_origin);
-          // $('.game-description').text(data[i].description);
-          // $('.game-instructions').text(data[i].instructions);
 
+          // template literal for printing data to page
           let collapsible = `<ul class="collapsible popout">
     <li>
         <div class="collapsible-header">${data[i].title}</div>
@@ -51,13 +56,11 @@ $(document).ready(function () {
         </div>
     </li>
 </ul>`;
-          $('#put-cards-here').html(collapsible);
           $('#put-cards-here').append(collapsible);
           $('.collapsible').collapsible();
-        };
-      }
-      else {
-        $('#put-cards-here').text('No games found!');
+        }
+      } else {
+        $('#put-cards-here').addClass('.no-games').text('No games found!');
       }
     });
   });

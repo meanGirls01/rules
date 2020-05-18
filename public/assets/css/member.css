@@ -14,10 +14,11 @@ nav {
 }
 
 .menu {
-    margin: 60px;
-    width: 200px;
+    margin-left: 30px;
     border: 4px solid lemonchiffon;
     padding: 10px;
+    margin-top: 60px;
+    /* text-align: center; */
 }
 
 .title {
@@ -30,6 +31,11 @@ section {
     border: lemonchiffon solid 4px;
     margin-top: 60px;
 }
+
+.dash {
+    color: lemonchiffon;
+}
+
 .subtitle {
     color: lemonchiffon;
     text-align: center;

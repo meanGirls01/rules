@@ -21,8 +21,11 @@ nav {
 .input {
     width: 90% !important;
     color: lemonchiffon !important;
+    padding-left: 30px !important;
 }
-
+#screenlogo {
+    margin-left: 10%;
+}
 ::placeholder {
     color: lemonchiffon !important;
     text-align: center !important;
@@ -46,6 +49,10 @@ button {
 .search {
     margin-top: 50px;
 }
+.no-games {
+    color: lemonchiffon;
+    font-size: 30px;
+}
 /* footer */
 .footer {
     position: fixed;
@@ -61,4 +68,16 @@ button {
 .fa {
     color: lemonchiffon;
     margin: 10px;
+}
+@media screen and (max-width: 989px) {
+    .search {
+        margin-top: 100px;
+    }
+    .input {
+        width: 250px !important;
+    }
+    #screenlogo {
+        margin-top: 50px;
+        margin-left: 10px;
+    }
 }

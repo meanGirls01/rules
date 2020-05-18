@@ -1,5 +1,5 @@
 
-module.exports = function (sequelize, DataTypes) {
+module.exports = (sequelize, DataTypes) => {
   let Games = sequelize.define('Games', {
     title: {
       allowNull: false,
@@ -59,6 +59,5 @@ module.exports = function (sequelize, DataTypes) {
   Games.sync();
 
   return Games;
-
 };
 
