@@ -3,7 +3,7 @@ module.exports = function(req, res, next) {
   // If the user is logged in, continue with the request to the restricted route
   console.log('isAuthenticated');
   if (req.user) {
-    console.log(req.user)
+    console.log(req.user);
     return next();
   }
   console.log('not logged in');

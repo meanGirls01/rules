@@ -46,17 +46,21 @@ module.exports = function (sequelize, DataTypes) {
         len: [1]
       }
     },
+    
     createdAt: DataTypes.DATE,
     updatedAt: DataTypes.DATE
-    // createdAt: {
-    //     allowNull: false,
-    //     type: DataTypes.DATE,
-    //     defaultValue: DataTypes.NOW
-    // }
 
-    //association to the rules
   });
 
+  //association to the rules
+  Games.associate = function (models) {
+    models.Games.belongsTo(models.User, {
+      onDelete: 'CASCADE',
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
 
 
   Games.sync();

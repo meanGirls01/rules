@@ -1,6 +1,6 @@
 USE gamerules_db;
 
-INSERT INTO Games (title, description, country_origin, category, instructions)
+INSERT INTO Games (title, description, country_origin, category, instructions, UserId)
 
 VALUES ('Monopoly', 'In the game, players roll two six-sided dice to move around the game board, buying and trading properties, and developing them with houses and hotels. ... The game is named after the economic concept of monopoly—the domination of a market by a single entity.', 'United States', 'Board Game', 'Game Play
 
@@ -43,4 +43,8 @@ Unimproved properties can also be mortgaged to the Bank for the value mortgage v
 
 Winning the Game
 
-You may chose to end the game at any time and tally the total worth of each player (including buildings and all property worth). You may also chose to play until all but one player has been declared Bankrupt. Bankruptcy occurs when a player owes more than he or she can pay. You must turn over all that you have including money and Title Deeds to the Bank or another player, depending on who the current debt is owed to. Any player who has declared Bankruptcy is no longer part of the game. According to the rules of Monopoly, the last player in the game, or the player with the most money, wins.')
+You may chose to end the game at any time and tally the total worth of each player (including buildings and all property worth). You may also chose to play until all but one player has been declared Bankrupt. Bankruptcy occurs when a player owes more than he or she can pay. You must turn over all that you have including money and Title Deeds to the Bank or another player, depending on who the current debt is owed to. Any player who has declared Bankruptcy is no longer part of the game. According to the rules of Monopoly, the last player in the game, or the player with the most money, wins.', 1)
+
+USE gamerules_db;
+
+INSERT INTO users (username, email, password) VALUES ('sammiebabyyy', 'sammiefrog@live.com', 'password');

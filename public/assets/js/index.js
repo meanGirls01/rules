@@ -9,10 +9,10 @@ $(document).ready(function () {
     menu.classList.toggle('is-active');
   });
 
-    $.get('/api/user_data').then(function (data) {
-        console.log(data);
-        $('.member-name').text(data.username);
-    });
+  $.get('/api/user_data').then(function (data) {
+    console.log(data);
+    $('.member-name').text(data.username);
+  });
 
   let search = $('#search');
   let input = $('.input');
@@ -21,7 +21,7 @@ $(document).ready(function () {
     event.preventDefault();
     let searchTerm = input.val().trim();
 
-    $.get('/api/' + searchTerm, function (data) {
+    $.get('/api/games/' + searchTerm, function (data) {
       if (data.length !== 0) {
         console.log(data);
         for (var i = 0; i < data.length; i++) {

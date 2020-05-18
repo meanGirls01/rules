@@ -47,10 +47,10 @@ module.exports = function(app) {
     console.log('getting user data');
     if (!req.user) {
       // The user is not logged in, send back an empty object
-      console.log('number 1')
+      console.log('number 1');
       res.json({});
     } else {
-      console.log('number 2')
+      console.log('number 2');
       // Otherwise send back the user's email and id
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
