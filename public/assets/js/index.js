@@ -1,6 +1,5 @@
 // code that runs when document is ready
 $(document).ready(function () {
-
   // activates nav bar to be functional
   let burger = document.querySelector('.navbar-burger');
   let menu = document.querySelector('.navbar-menu');
@@ -14,14 +13,17 @@ $(document).ready(function () {
   let input = $('.input');
 
   // adding event listener to search button
-  search.on('click', (event) => {
+  search.on('click', event => {
     event.preventDefault();
+
+    // replacing the image on the screen for the cards
+    $('#screenlogo').attr('style', ' display:none');
 
     // variable for value of search term
     let searchTerm = input.val().trim();
 
     // get call to retrieve data selected from api using search term value
-    $.get('/api/' + searchTerm, (data) => {
+    $.get('/api/' + searchTerm, data => {
       if (data.length !== 0) {
         for (var i = 0; i < data.length; i++) {
           // template literal for printing data to page
@@ -47,9 +49,8 @@ $(document).ready(function () {
 </ul>`;
           $('#put-cards-here').append(collapsible);
           $('.collapsible').collapsible();
-        };
-      }
-      else {
+        }
+      } else {
         $('#put-cards-here').addClass('.no-games').text('No games found!');
       }
     });
