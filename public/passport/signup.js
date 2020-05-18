@@ -24,7 +24,7 @@ $(document).ready(function () {
       signUpForm.val("");
     });
   
-            // If we have an email and password, run the signUpUser function
+     // If we have an email and password, run the signUpUser function
     function signUpUser(email, password, username) {
       $.post("/api/signup", {
         email: email,
