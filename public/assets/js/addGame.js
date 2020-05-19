@@ -1,7 +1,7 @@
 // code that runs when document is ready
 $(document).ready(function () {
 
-  // activates nav bar to be functional
+  // activates nav-burger-bar to be functional
   let burger = document.querySelector('.navbar-burger');
   let menu = document.querySelector('.navbar-menu');
   burger.addEventListener('click', () => {

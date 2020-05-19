@@ -3,7 +3,7 @@ $(document).ready(function () {
     const signUpForm = $("form.signup");
     const emailInput = $("input#email-input");
     const passwordInput = $("input#password-input");
-      const usernameInput = $('input#username');
+    const usernameInput = $('input#username');
 
     // When the signup button is clicked, we validate the email and password are not blank
     signUpForm.on("submit", function(event) {
@@ -34,6 +34,7 @@ $(document).ready(function () {
         .then(function(data) {
           window.location.replace("/member");
           console.log('signedup');
+          console.log(data);
           // If there's an error, handle it by throwing up a bootstrap alert
             })
             .catch(handleLoginErr);
