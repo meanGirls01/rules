@@ -38,7 +38,7 @@ $(document).ready(function () {
           // template literal for printing data to page
           let collapsible = `<ul class="collapsible popout">
     <li>
-        <div class="collapsible-header has-text-weight-bold">${data[i].title}<p class="has-text-right has-text-weight-light">${data.username}</p></div>
+        <div class="collapsible-header has-text-weight-bold" style="display:flex; justify-content: space-between;">${data[i].title} <span class="has-text-right has-text-black has-text-weight-light">${data[i].User.username}</span></div>
         <div class="collapsible-body"><span>
         <h4>Category: ${data[i].category}</h4>
         <h4>Country of Origin: ${data[i].country_origin}</h4>
