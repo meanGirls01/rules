@@ -6,7 +6,7 @@ module.exports = (app) => {
  
   app.post('/api/login', passport.authenticate('local'), (req, res) => {
     res.json({
-      username: req.user.username,
+      // username: req.user.username,
       email: req.user.email,
       id: req.user.id
     });
@@ -38,10 +38,9 @@ module.exports = (app) => {
   app.get('/api/user_data', (req, res) => {
     if (!req.user) {
       // The user is not logged in, send back an empty object
-      console.log('number 1');
       res.json({});
     } else {
-      console.log('number 2');
+      console.log('yes, userdata');
       // Otherwise send back the user's email and id
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
