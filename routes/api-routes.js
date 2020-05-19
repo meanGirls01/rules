@@ -4,14 +4,14 @@ module.exports =  (app) => {
   // Find all games
   app.get('/api/all', (req, res) => {
     db.Games.findAll({
-        where: {},
-        include: [
-            {
-                model: db.User,
-                attributes: ['username'], // Add column names here inside attributes array.
-                required: true
-            }
-        ]
+      where: {},
+      include: [
+        {
+          model: db.User,
+          attributes: ['username'], // Add column names here inside attributes array.
+          required: true
+        }
+      ]
     }).then(function (results) {
       res.json(results);
     });
@@ -23,24 +23,25 @@ module.exports =  (app) => {
   //  Get game by title
   app.get('/api/games/:title', (req, res) => {
     db.Games.findAll({
-        where: {
-            title: req.params.title
-        },
-        include: [
-            {
-                model: db.User,
-                attributes: ['username'], // Add column names here inside attributes array.
-                required: true
-            }
-        ]
+      where: {
+        title: req.params.title
+      },
+      include: [
+        {
+          model: db.User,
+          attributes: ['username'], // Add column names here inside attributes array.
+          required: true
+        }
+      ]
     })
-        .then(function (dbGame) {
-            res.json(dbGame);
-        })
-        .catch(function (err) {
-            res.json(err);
-        });
+      .then(function (dbGame) {
+        res.json(dbGame);
+      })
+      .catch(function (err) {
+        res.json(err);
+      });
   });
+  
   //  Get Game by ID
   app.get('/api/games/:id', (req, res) => {
     db.Games.findOne({
