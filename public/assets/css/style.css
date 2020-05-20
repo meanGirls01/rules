@@ -15,6 +15,9 @@ nav {
 .navbar-dropdown {
     background-color: lemonchiffon !important;
 }
+#allcontent {
+    height: 100vh;
+}
 .card-info {
     margin-top: 100px;
 }
@@ -57,7 +60,6 @@ button {
 }
 /* footer */
 .footer {
-    margin-top: 100px;
     width: 100%;
     background-color: #222831;
     color: lemonchiffon;

@@ -1,8 +1,8 @@
 // code that runs when document is ready
 $(document).ready(function () {
+  const iconPics = { boardgame: 'assets/images/006-gambling.png' };
 
   // activates nav bar to be functional
-
   let burger = document.querySelector('.navbar-burger');
   let menu = document.querySelector('.navbar-menu');
   burger.addEventListener('click', () => {
@@ -31,14 +31,17 @@ $(document).ready(function () {
     let searchTerm = input.val().trim();
 
     $.get('/api/games/' + searchTerm, function (data) {
-    // get call to retrieve data selected from api using search term value
+      // get call to retrieve data selected from api using search term value
       if (data.length !== 0) {
         for (var i = 0; i < data.length; i++) {
-
           // template literal for printing data to page
+
+          // data[i].category.toLowerCase().split(" ").join("")
           let collapsible = `<ul class="collapsible popout">
     <li>
-        <div class="collapsible-header has-text-weight-bold" style="display:flex; justify-content: space-between;">${data[i].title} <span class="has-text-right has-text-black has-text-weight-light">${data[i].User.username}</span></div>
+        <div class="collapsible-header has-text-weight-bold" style="display:flex; justify-content: space-between;">${data[i].title} 
+        <span> <i src=${iconPics['boardgame']} 
+        <span class="has-text-right has-text-black has-text-weight-light">${data[i].User.username}</span></div>
         <div class="collapsible-body"><span>
         <p class="category-country">Category: ${data[i].category}</p>
         <p class="category-country">Country of Origin: ${data[i].country_origin}</p>
