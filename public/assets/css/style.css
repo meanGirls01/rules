@@ -38,9 +38,11 @@ span {
     background-color: lemonchiffon;
 }
 
-h4 {
-    color: #222831;
+.country-category {
+    color: lemonchiffon;
+    font-size: 15px;
 }
+
 button {
     background-color: lemonchiffon !important;
     color: #222831 !important;
