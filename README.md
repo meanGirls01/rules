@@ -9,30 +9,59 @@
 <li><a href="#usage">Usage</a></li> 
 <li><a href="#screen">ScreenShots</a></li> 
 <li><a href="#contributors">Contributors/ Contact</a></li>
+<li><a href="#test">Test</a></li>
 
 <h2 id="description"> Description </h2>
-<p></p>   
-<h2 id="installation"> Installation </h2>
-<!-- <p>npm i, Json file included (in case  forked!)</p>           -->
-<h2 id="tech"> Technology Stack </h2>          
-<!-- <ul>
-<li>Node.js</li>
-<li>JavaScript</li>
-<li>SQL</li>
-</ul>           -->
-<h2 id="usage"> Usage </h2>
-<!-- <ol>
-<li></li>
-<li></li>
-</ol>    -->
-<h2 id="screen"> ScreenShoots </h2>
-<h4> Desktop </h4>
-<!-- <img src= "">
-<img src= ""> -->
-<h4> Mobile </h4>
-<!-- <img width="200" height="300" src= "">
-<img width="200" height="300" src= ""> -->
+<p>An app that allows a user to access game rules at their fingertips. Stickler's Paradise is an open source app where a user can view and search for games, or they can create an account so that they can add in their own games and rules. When viewing games, the username is tagged to the game so that the author is known. Multiple versions of rules can be posted for games.
+</p>
 
+<h2 id="installation"> Installation </h2>
+<p> Step 1. Git clone this link to your terminal: https://github.com/meanGirls01/rules</p>
+<p> Step 2. Navigate into the cloned repository.</p>
+<p> Step 3. Install the required dependencies using the following command:</p>
+
+    ```
+    npm install
+    ```
+
+<p> Step 4. Run the application from the command line with following command:</p>
+
+    ```
+    node server.js
+    ```
+
+<h2 id="tech"> Technology Stack </h2>          
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>Bulma</li>
+<li>Materialize</li>
+<li>JavaScript</li>
+<li>JQuery</li>
+<li>Node</li>
+<li>Sequelize</li>
+<li>MySQL</li>
+<li>Express</li>
+<li>Heroku</li>
+<li>Git</li>
+</ul>          
+<h2 id="usage"> Usage </h2>
+<p>Finding and adding game rules</p> 
+<h2 id="screen"> ScreenShots </h2>
+<h4> Desktop </h4>
+<img src= "public/assets/images/screenshots/Home.png" alt="home" >
+<img src= "public/assets/images/screenshots/add-game.png" alt="add-game" >
+<img src= "public/assets/images/screenshots/see-all-game.png" alt= "see-all-games">
+<img src= "public/assets/images/screenshots/about.png" alt= "about">
+<img src= "public/assets/images/screenshots/member-board.png" alt="account" >
+<h4> Mobile </h4>
+<img width="200" height="350" src= "public/assets/images/screenshots/home-mobile.png">
+<img width="200" height="350" src= "public/assets/images/screenshots/add-game-mobile.png">
+<img width="200" height="350" src= "public/assets/images/screenshots/see-all-mobile.png">
+<img width="200" height="350" src= "public/assets/images/screenshots/about-mobile.png">
+<img width="200" height="350" src= "public/assets/images/screenshots/member-mobile.png">
+<h2 id="test"> Test </h2>
+<img width="600" height="350" src= "public/assets/images/screenshots/stickler.gif" alt="gif" >
 <h2 id="contributors"> Contributors/ Contact</h2>
 <h4><a href= "https://github.com/chaalexander">@chaalexander</a></h4>
 <img align="right" width="100" height="100" src="https://avatars1.githubusercontent.com/u/59755481?v=4">
