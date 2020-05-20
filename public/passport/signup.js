@@ -36,7 +36,7 @@ $(document).ready(function () {
           console.log('signedup');
           console.log(data);
           // If there's an error, handle it by throwing up a bootstrap alert
-            })
+        })
             .catch(handleLoginErr);
     }
 
