@@ -24,6 +24,8 @@ $(document).ready(function () {
   search.on('click', event => {
     event.preventDefault();
 
+    $('#put-cards-here').empty();
+
     // replacing the image on the screen for the cards
     $('#screenlogo').attr('style', ' display:none');
 
@@ -63,5 +65,8 @@ $(document).ready(function () {
         $('#put-cards-here').addClass('.no-games').text('No games found!');
       }
     });
+
+    input.val('');
+
   });
 });
