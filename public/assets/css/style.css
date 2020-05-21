@@ -60,6 +60,7 @@ button {
 }
 /* footer */
 .footer {
+    margin-top: 200px;
     width: 100%;
     background-color: #222831;
     color: lemonchiffon;
